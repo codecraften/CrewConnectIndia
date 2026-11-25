@@ -7,6 +7,7 @@ import {
   Space_Mono,
 } from "next/font/google";
 import type { ReactNode } from "react";
+import { Analytics } from "@vercel/analytics/next";
 
 import SiteChrome from "./components/SiteChrome";
 import "./globals.css";
@@ -67,6 +68,7 @@ export default function RootLayout({
     >
       <body>
         <SiteChrome>{children}</SiteChrome>
+        <Analytics />
       </body>
     </html>
   );
